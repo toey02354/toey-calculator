@@ -53,7 +53,7 @@
 <div class="tab-container">
     {#each tabs as tab (tab.id)}
     <button 
-        class={`tab-content ${currentSelectedTab===tab.id?"tab-content-selected":undefined}`}
+        class={currentSelectedTab===tab.id?"variant-filled-primary":"variant-filled-secondary"}
         on:click={()=>selectTab(tab.id)}
     >
         {tab.name}
