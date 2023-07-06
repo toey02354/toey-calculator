@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onDestroy, onMount } from "svelte";
-    import { selectedTab, tabContent, tabStores } from "../stores/tabStores";
-    import { getStoredTab, getStoredTabs } from "../utils/localStorageServices"
+    import { selectedTab, tabStores } from "../stores/tabStores";
+    import { getStoredTabs } from "../utils/localStorageServices"
 	import type { ITab } from "../types/tab";
 
     const {tabSubscribe, addTab, setTabs} = tabStores()
@@ -61,11 +61,3 @@
     {/each}
     <button on:click={addNewTab}>+</button>
 </div>
-
-<style lang="postcss">
-.tab-content-selected{
-    background: theme(colors.primary.500);
-    color: theme(colors.white);
-    border: none;
-}
-</style>
