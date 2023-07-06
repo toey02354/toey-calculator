@@ -32,9 +32,12 @@
     
 </script>
 
-<textarea bind:value={$tabContent}/>
+<textarea 
+    class="text-black"
+    bind:value={$tabContent}
+/>
 
-<style>
+<style lang="postcss">
     textarea {
         padding: 0.5rem;
         border: none;
